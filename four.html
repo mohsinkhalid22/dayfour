@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Four</title>
+    <style>
+        table, td, th {
+            border: 1px solid;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        th, td {
+            height: 40px;
+        }
+        td {
+            text-align: center;
+        }
+        tr:hover {background-color: coral;}
+
+        #grad1 {
+            height: 200px;
+            background-color: rgb(63, 123, 30);
+            background-image: linear-gradient(rgb(106, 163, 213),rgb(156, 34, 156));
+        }
+
+        #grad2 {
+            height: 150px;
+            width: 200px;
+            background-image: radial-gradient(rgb(6, 125, 6) 5%, yellow 15%, green 70%);
+        }
+
+        #ani {
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            animation-name: example;
+            animation-duration: 4s;
+        }
+
+        @keyframes example {
+            from {background-color: rebeccapurple;}
+            to {background-color: rgb(193, 145, 188);}
+        }
+    </style>
+</head>
+<body>
+    <div id="grad1">
+    
+        <h2>Table</h2>
+
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>Griffim</td>
+        </tr>
+        <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+        </tr>
+    </table>
+    </div>
+
+    <div id="grad2"></div> 
+
+    <div id="ani"></div>
+
+    <h3>JavaScript</h3>
+
+    <p id="demo">Changing of HTML content.</p>
+
+    <button type="button"
+    onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'> Click Me!
+    </button>
+    <hr>
+    <button
+    onclick="document.getElementById('myImage').src='/Users/mohsin/Downloads/pic_bulbon.gif'">Turn on the light
+    </button>
+
+    <img id="myImage" src="/Users/mohsin/Downloads/pic_bulboff.gif" style="width: 100px;">
+
+    <button type="button"
+    onclick="document.getElementById('myImage').src='/Users/mohsin/Downloads/pic_bulboff.gif'">Turn off the light
+    </button>
+    <hr>
+    <p id="x"></p>
+    <hr>
+    <p id="y"></p>
+
+
+    <button type="button"
+    onclick="myFunction()">Click Me!</button>
+
+    <script>
+        let x, y, z;
+        x = 7;
+        y = 8;
+        z = x*y;
+
+        document.getElementById("x").innerHTML = "The value of z is " + z + ".";
+        
+        function myFunction() {
+            document.getElementById("y").innerHTML = "Hello Dolly!";
+        }
+        
+    </script>
+
+
+</body>
+</html>
